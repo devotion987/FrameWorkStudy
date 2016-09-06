@@ -1,4 +1,4 @@
-package com.wugy.spring.test;
+package com.wugy.test.spring;
 
 import javax.sql.rowset.serial.SerialBlob;
 

@@ -1,4 +1,4 @@
-package com.wugy.spring.test;
+package com.wugy.test.spring;
 
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;

@@ -1,4 +1,4 @@
-package com.wugy.activiti.test;
+package com.wugy.test.activiti;
 
 import java.util.List;
 
@@ -12,7 +12,7 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.Assert;
 
-import com.wugy.spring.test.BaseTest;
+import com.wugy.test.spring.BaseTest;
 
 public class LeaveProcessTest extends BaseTest {
 
