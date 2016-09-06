@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.wugy.activiti.dao.UserDao">
+
+	<resultMap type="user" id="userResultMap">
+		<result property="id" column="id" />
+		<result property="name" column="name" />
+		<result property="remark" column="remark" jdbcType="BLOB"
+			typeHandler="com.wugy.activiti.utils.BlobToStringHandler" />
+	</resultMap>
+
+	<insert id="insertUser" parameterType="user">
+		insert into user(name,
+		remark)
+		values(#{name}, #{remark, jdbcType=BLOB})
+	</insert>
+	<select id="findByName" resultMap="userResultMap">
+		<!-- 模糊查询： like '%'||#{name}||'%' 或 '%${name}%' -->
+		select * from user where name like "%"#{name}"%"
+	</select>
+</mapper>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:core-commons="http://www.wugy.com/schema/core-commons"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.wugy.com/schema/core-commons
+		http://www.wugy.com/schema/core-commons-1.0.xsd">
+
+	<core-commons:fileList id="javaList"
+		directory="src/test/java/com/wugy/spring/test">
+		<core-commons:fileFilter>
+			<bean class="org.apache.commons.io.filefilter.RegexFileFilter">
+				<constructor-arg value=".*.java" />
+			</bean>
+		</core-commons:fileFilter>
+	</core-commons:fileList>
+</beans>
